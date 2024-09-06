@@ -115,6 +115,15 @@ exports.logout = catchAsync(async (req, res, next) => {
     });
 });
 
+exports.getUser = catchAsync(async (req, res, next) => {
+  const user = await User.find();
+
+  res.status(200).json({
+    status: true,
+    user,
+  });
+});
+
 exports.userDetails = catchAsync(async (req, res, next) => {
   const user = await User.findById(req.user.id);
 

@@ -13,7 +13,7 @@ router.put("/resetPassword/:token", useController.resetPassword);
 
 //user informations
 router.get("/userDetails", isAuthenticated, useController.userDetails);
-router.get("/userprofile", useController.getUserForPortfolio);
+router.get("/userprofile", useController.getUser);
 router.put("/update-me", isAuthenticated, useController.updateProfile);
 router.put("/updatePassword", isAuthenticated, useController.updatePassword);
 
