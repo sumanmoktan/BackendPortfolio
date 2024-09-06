@@ -106,6 +106,8 @@ exports.logout = catchAsync(async (req, res, next) => {
     .cookie("token", "", {
       httpOnly: true,
       expires: new Date(Date.now()),
+      sameSite: "None",
+      secure: true,
     })
     .json({
       success: true,
