@@ -20,7 +20,7 @@ dotenv.config({ path: "./.env" });
 
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://localhost:5174"],
+    origin: ["https://suman-moktan.netlify.app", "https://suman12.netlify.app"],
     methods: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
