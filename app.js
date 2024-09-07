@@ -23,6 +23,8 @@ app.use(
     origin: ["https://suman-moktan.netlify.app", "https://suman12.netlify.app"],
     methods: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
+    allowedHeaders: 'Content-Type,Authorization',
+    optionsSuccessStatus: 200  
   })
 );
 
